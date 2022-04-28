@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Stuff', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding:100px 0 10px 0;">
+        <!-- Start Stuff -->
+        <div class="stuff-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="heading-title text-center">
+                            <h2>Thành viên</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img th:src="@{/images/stuff-img-01.jpg}">
+                                <ul class="social">
+                                    <li>
+                                        <a href="" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-google-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Trần Duy Tân</h3>
+                                <span class="post">PO - Web Dev - BackEnd</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img th:src="@{/images/stuff-img-02.jpg}">
+                                <ul class="social">
+                                    <li>
+                                        <a href="" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-google-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Nguyễn Đức Anh</h3>
+                                <span class="post">SM - Web Dev - FrontEnd</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img th:src="@{/images/stuff-img-03.jpg}">
+                                <ul class="social">
+                                    <li>
+                                        <a href="" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-google-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Đoàn Kỷ Nguyên</h3>
+                                <span class="post">Tester</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img th:src="@{/images/stuff-img-04.jpg}">
+                                <ul class="social">
+                                    <li>
+                                        <a href="" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-google-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Mai Hữu Phát</h3>
+                                <span class="post">Tester</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img th:src="@{/images/stuff-img-05.jpg}">
+                                <ul class="social">
+                                    <li>
+                                        <a href="" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-google-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Trần Khánh Toàn</h3>
+                                <span class="post">Web Dev - BackEnd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="navigation :: footer_menu"></div>
+
+    <a href="" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+</body>
+
+</html>

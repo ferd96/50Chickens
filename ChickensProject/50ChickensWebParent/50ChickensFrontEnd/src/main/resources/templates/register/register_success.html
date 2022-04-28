@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head(${pageTitle}, 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding-top: 100px;;">
+        <div>&nbsp;</div>
+        <div class="text-center">
+            <h2>Đăng ký tài khoản</h2>
+            <h4>Quý khách đã đăng ký tài khoản thành công!</h4>
+            <p>Vui lòng kiểm tra email để xác nhận.</p>
+            <p><a th:href="@{/login}">Đăng nhập</a></p>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+    <div th:replace="navigation :: footer_menu"></div>
+</body>
+
+</html>

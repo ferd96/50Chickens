@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Shopme', 'none')" />
+
+<body id="login-bg">
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container text-center" style="padding-top: 100px;">
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"><a th:href="@{/login}">Đăng nhập</a></label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"><a th:href="@{/register}">Đăng ký</a></label>
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <form th:action="@{/login}" method="post">
+                            <div th:if="${param.error}">
+                                <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+                            </div>
+                            <div th:if="${param.logout}">
+                                <p class="text-warning">Bạn đã đăng xuất thành công.</p>
+                            </div>
+                            <div class="group">
+                                <label for="user" class="label">Email</label>
+                                <input id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Mật khẩu</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked>
+                                <label for="check"><span class="icon"></span> Nhớ mật khẩu</label>
+                            </div>
+                            <div class="group">
+                                <input type="submit" class="button" value="Đăng nhập">
+                            </div>
+                            <div class="hr"></div>
+                        </form>
+                        <div class="group">
+                            <b><a class="input" style="color: #dc3545;" th:href="@{/oauth2/authorization/google}">&nbsp;&nbsp;<i class="fa fa-google"></i> Tiếp tục với Google</a><b>
+						</div>
+						
+						<div class="group" >
+							<b><a class="input" style="color: #007bff;" th:href="@{/oauth2/authorization/facebook}">&nbsp;&nbsp;<i class="fa fa-facebook"></i> Tiếp tục với Facebook</a><b>
+						</div>
+						<div class="hr"></div>
+						<div style="color: #f3e000;">
+						or <a th:href="@{/forgot_password}">Quên mật khẩu</a>
+						</div>
+						<div style="color: #f3e000;">
+							Chưa có tài khoản? <a th:href="@{/register}"><b>Đăng ký</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="navigation :: footer_menu"></div>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Blog', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding:150px 0 10px 0;">
+        <div class="blog-box">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>Tin tức</h2>
+                        <p>Thông tin về sản phẩm mới, chương trình khuyến mãi và các thông tin cửa hàng đăng lên</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-01.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Gà Rán Sốt Ngọt/Cay/Sốt Nước Tương Đậm vị ngon, thơm vị Sốt</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>20 April 2022</span></li>
+                            </ul>
+                            <p>Mùa lễ hội năm mới lại càng thêm nhộn nhịp với cơn lốc “Crazy Wednesday - Thứ Tư Siêu Bão Giá” đã chính thức quay trở lại. </p>
+                            <p>Ngoài ra, các mems nhà mình có thể gọi thêm các món ăn kèm khác... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-02.jpg}" style="width: 100%;" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>MỪNG SINH NHẬT CỬA HÀNG</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>11 April 2022</span></li>
+                            </ul>
+                            <p>MUA 1 TẶNG 1 SUỐT TUẦN |KHAO TIỆC - 50 Chickens THÊM TUỔI MỚI</p>
+                            <br>
+                            <p>Thời gian: 11/04-18/04/2022 <br> - Tặng ngay 2 miếng gà + 1 nước khi mua 1 combo... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-03.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>GIẢM 40% KHI ORDER QUA WEBSITE 50 CHICKENS</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>8 April 2022</span></li>
+                            </ul>
+                            <p>GIẢM 40% CHO CÁC MÓN ĂN LẺ </p>
+                            <p>Các Fan Gà rán ơi, Deal Hot như thế này thì làm sao có thể ngó lơ phải không nào? 50 Chickens giảm 40% cho các món lẻ khi order qua Website đó...</p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-04.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>CÔNG THỨC MỚI - PHÁT HIỆN MỚI.</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>4 April 2022</span></li>
+                            </ul>
+                            <p>Hãy đặt món tại 50 Chickens để được tặng kèm một suất Gà rán Atlantic - Món thử nghiệm tặng miễn phí </p>
+                            <p>Số lượng có hạn, áp dụng từ...</p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-05.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Ngày VUI VẺ - Giá trẻ bất ngờ</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>1 April 2022</span></li>
+                            </ul>
+                            <p>Đến cửa hàng check-in cùng với nụ cười</p>
+                            <p>Sẽ được giảm giá 10% trên tổng hóa đơn (tối thiểu đơn 10$)... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-06.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Gà rán khoai lang phô mai</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>28 March 2022</span></li>
+                            </ul>
+                            <p>Gà rán với công thức bột chiên mới </p>
+                            <p>Trải nghiệm sự độ ngọt và béo khó cưỡng như crush của bạn... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-07.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Trải nghiệm mỳ ý sốt 5 loại phô mai </h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>20 March 2022</span></li>
+                            </ul>
+                            <p>Mì Ý sốt kem phô mai mang đậm phong vị châu Âu. </p>
+                            <p>Sợi mì dai dai, chín tới, không bị nhũn nát, sốt kem phô mai béo ngậy, thơm thơm vừa đậm đà vừa ngon. Kết hợp với thịt và các loại hải sản... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-08.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Gà rán 50 Chickens + Hambuger = ???</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>16 March 2022</span></li>
+                            </ul>
+                            <p>Hamburger gà cũng là món ăn yêu thích của tất cả mọi người ở mọi lứa tuổi, vừa nhanh vừa đầy đủ chất dinh dưỡng. </p>
+                            <p>Đầu bếp tại 50 Chickens bán gà rán cũng tạo ra món Hamburger gà để phục vụ nhu cầu ăn uống của thực khách với hương vị mới lạ cùng với các loại sốt gà đặc biệt, sẽ tạo nên một hương vị hoàn toàn mới mẻ... </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-box-inner">
+                        <div class="blog-img-box">
+                            <img class="img-fluid" th:src="@{/images/blog-img-09.jpg}" alt="">
+                        </div>
+                        <div class="blog-detail">
+                            <h4>Bữa trưa no bụng đủ đầy tại 50 Chickens.</h4>
+                            <ul>
+                                <li><span>Post by Admin</span></li>
+                                <li>|</li>
+                                <li><span>12 March 2022</span></li>
+                            </ul>
+                            <p>Cơm gà rán giòn là khẩu phần sẽ cung cấp đầy đủ chất dinh dưỡng cần thiết cho một bữa ăn, vừa nhanh và tiện lợi cho mọi người.</p>
+                            <p>Cơm gà rán giòn gồm cơm, gà rán giòn, rau cải cùng với nước sốt sẽ làm ngon miệng mọi thực khách. Hãy hưởng thức Cơm gà rán giòn tại 50 Chickens. </p>
+                            <a class="btn btn-lg btn-circle btn-outline-new-white" href="">Đọc thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="navigation :: footer_menu"></div>
+
+    <a href="" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+</body>
+
+</html>

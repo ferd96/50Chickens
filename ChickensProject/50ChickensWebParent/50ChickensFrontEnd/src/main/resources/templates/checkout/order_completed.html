@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Shopme', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding:150px 0 50px 0;">
+
+        <div class="text-center border border-secondary rounded m-3 p-3">
+            <h2>Đơn hàng của bạn đã thanh toán thành công!</h2>
+            <br>
+            <h5>Email thông báo đơn hàng đã được gửi đến quý khách.</h5>
+            <br>
+            <h5>Vui lòng check email để xem thông tin chi tiết đơn hàng.</h5>
+            <br>
+            <h6>Kiểm tra đơn hàng: <b><a th:href="@{/orders}">Đơn hàng</a><b></h6>
+		<br>
+		<h6>Đặt đơn hàng mới? Vào đây => <b><a th:href="@{/category}">Thực đơn</a><b></h6>
+	</div>
+
+</div>
+<div th:replace="navigation :: footer_menu"></div>	
+</body>
+</html>

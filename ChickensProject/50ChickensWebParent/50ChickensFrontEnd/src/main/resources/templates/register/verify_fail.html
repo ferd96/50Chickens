@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Verification Failed!', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding-top: 100px;;">
+        <div>&nbsp;</div>
+        <div class="text-center">
+            <h2>Xác nhận tài khoản</h2>
+            <h4>Tài khoản của quý khách chưa được xác nhận, hoặc mã xác nhận chưa chính xác.</h4>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+    <div th:replace="navigation :: footer_menu"></div>
+</body>
+
+</html>

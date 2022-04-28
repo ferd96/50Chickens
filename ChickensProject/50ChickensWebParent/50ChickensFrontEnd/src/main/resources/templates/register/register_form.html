@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head(${pageTitle}, 'none')" />
+
+<body id="signup-bg">
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container text-center signup-bg" style="padding:100px 0 10px 0;">
+        <div class="signup-wrap">
+            <div class="signup-html">
+
+                <input id="tab-1" type="radio" name="tab" class="sign-in"><label for="tab-1" class="tab"><a th:href="@{/login}">Đăng nhập</a></label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab"><a th:href="@{/register}">Đăng ký</a></label>
+                <div class="signup-form">
+                    <div class="sign-up-htm">
+                        <form th:action="@{/create_customer}" method="post" th:object="${customer}" onsubmit="return checkEmailUnique(this);">
+                            <div class="group">
+                                <label class="label">Họ:</label>
+                                <input type="text" th:field="*{firstName}" class="input" required="required" maxlength="45" minlength="2" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Tên:</label>
+                                <input type="text" th:field="*{lastName}" class="input" required="required" maxlength="45" minlength="2" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">E-mail:</label>
+                                <input type="email" th:field="*{email}" class="input" required="required" maxlength="45" minlength="8" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Mật khẩu:</label>
+                                <input type="password" th:field="*{password}" class="input" required="required" maxlength="15" minlength="6" oninput="checkPasswordMatch(document.getElementById('confirmPassword'))" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Nhập lại mật khẩu:</label>
+                                <input type="password" id="confirmPassword" class="input" required="required" maxlength="15" minlength="6" oninput="checkPasswordMatch(this)" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Số điện thoại:</label>
+                                <input type="text" th:field="*{phoneNumber}" class="input" required="required" maxlength="15" minlength="8" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Địa chỉ 1:</label>
+                                <input type="text" th:field="*{addressLine1}" class="input" required="required" maxlength="64" minlength="3" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Địa chỉ 2:</label>
+                                <input type="text" th:field="*{addressLine2}" class="input" maxlength="64" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Thành phố:</label>
+                                <input type="text" th:field="*{city}" class="input" maxlength="45" minlength="2" />
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Quốc gia:</label>
+                                <select class="input" th:field="*{country}">
+									<th:block th:each="country : ${listCountries}">
+									<option th:value="${country.id}">[[${country.name}]]</option>
+									</th:block>
+								</select>
+                            </div>
+
+                            <div class="group">
+                                <label class="label">Tỉnh:</label>
+                                <input type="text" th:field="*{state}" class="input" maxlength="45" minlength="3" list="listStates" />
+                                <datalist id="listStates"></datalist>
+                            </div>
+                             <div class="group">
+                                <label class="label">Mã bưu cục:</label>
+                                <input type="text" th:field="*{postalCode}" class="input" maxlength="10" minlength="3" list="listStates" />
+                                <datalist id="listStates"></datalist>
+                             </div>  
+                          
+
+                            <div class="group">
+                                <input type="submit" value="Tạo tài khoản" class="button" />
+                            </div>
+                        </form>
+                        <div class="hr"></div>
+                        <div class="foot-lnk" style="color: #f3e000;">
+                            <label>Đã là thành viên? <a th:href="@{/login}">Đăng nhập</a></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>&nbsp;</div>
+		<div th:replace="fragments :: modal_dialog"></div>
+	</div>
+	<div th:replace="navigation :: footer_menu"></div>
+	
+<script type="text/javascript">
+	contextPath = "[[@{/}]]";
+	
+	function checkEmailUnique(form) {
+		url = contextPath + "customers/check_unique_email";
+		customerEmail = $("#email").val();
+		csrfValue = $("input[name='_csrf']").val();
+		
+		params = {email: customerEmail, _csrf: csrfValue};
+		
+		$.post(url, params, function(response) {
+			if (response == "OK") {
+				form.submit();
+			} else if (response == "Duplicated") {
+				showWarningModal("Email đã có tài khoản khác sử dụng " + customerEmail);
+			} else {
+				showErrorModal("Phản hồi bất thường từ Server");
+			}
+		}).fail(function() {
+			showErrorModal("Không thể kết nối với Server");
+		});
+		
+		return false;
+	}	
+	
+</script>
+<script type="text/javascript" th:src="@{/js/common_modal.js}"></script>
+<script type="text/javascript" th:src="@{/js/common_customer_form.js}"></script>
+</body>
+</html>
+

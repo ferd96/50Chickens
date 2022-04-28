@@ -1,0 +1,41 @@
+server:
+  port: 80
+  servlet:
+    context-path: /50Chickens
+spring:
+  datasource:
+    password: Tan123456
+    url: jdbc:mysql://localhost:3306/shopmedb
+    username: root
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 682962631698-40bjp7cicjfk3nt33f466bk0ic4aask0.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+            - email
+            - profile
+          facebook:
+            client-id: 275881488062182
+            client-secret: ed82f3c3c91c776d644ea291ec569830
+            scope:
+            - email
+            - public_profile      
+
+spring.main.allow-circular-references: true

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Shopme', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+
+    <!-- Start slides -->
+    <div id="slides" class="cover-slides">
+        <ul class="slides-container">
+            <li class="text-left">
+                <img th:src="@{/images/slider-01.jpg}" alt="" />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>50 Chickens <br> Xin Chào</strong></h1>
+                            <p class="m-b-40">Quán gà rán với nước sốt đặc biệt thần thánh.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white"  th:href="@{/category}">Đặt món</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-left">
+                <img th:src="@{/images/slider-02.jpg}" alt="" />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>50 Chickens <br> Xin Chào</strong></h1>
+                            <p class="m-b-40">Món ăn sinh viên ngon - bổ - rẻ.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white"  th:href="@{/category}">Đặt món</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-left">
+                <img th:src="@{/images/slider-03.jpg}" alt="" />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>50 Chickens <br> Xin Chào</strong></h1>
+                            <p class="m-b-40">Đa dạng món, nhiều loại sốt.</p>
+                            <p><a class="btn btn-lg btn-circle btn-outline-new-white"  th:href="@{/category}">Đặt món</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slides-navigation">
+            <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!-- End slides -->
+
+    <!-- Start About -->
+    <div class="about-section-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                    <div class="inner-column">
+                        <h1>Đến với <span> 50 Chickens</span></h1>
+                        <p>Gà nổi bật với lớp da được tẩm ướp gia vị đậm đà, thịt gà không khô mà mềm và thơm.</p>
+                        <p> Ngoài ra còn có Hambuger, Mì ý với nước sốt công thức bí mật. </p>
+                        <p> Được lòng mọi người bởi quán có rất nhiều ưu đãi và giảm giá phù hợp với túi tiền thực khách.</p>
+                        <a class="btn btn-lg btn-circle btn-outline-new-white"  th:href="@{/category}">Đặt món</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img th:src="@{/images/about-img.jpg}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start QT -->
+    <div class="qt-box qt-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <p class="lead ">
+                        "Sự ngon miệng của quý khách là niềm vui của chúng tôi"
+                    </p>
+                    <span class="lead">50 Chickens</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End QT -->
+
+    <!-- Start Menu -->
+    <div class="menu-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2> <span>THỰC ĐƠN ĐẶC BIỆT</span></h2>
+                        <p>Các món ăn được nấu theo công thức bí mật gia truyền của quán</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row inner-menu-box">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Tất cả</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Gà rán</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mì ý</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Hambuger</a>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-01.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán Hỏa diệm sơn</h4>
+                                            <p>Cay nồng thơm đượm</p>
+                                            <h5>$9.90</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/G%C3%A0-R%C3%A1n-S%E1%BB%91t-Cay/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-02.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán sốt phô mai</h4>
+                                            <p>Dành cho tín đồ phô mai.</p>
+                                            <h5>$9.90</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/G%C3%A0-R%C3%A1n-Gi%C3%B2n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-03.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán sốt Teriyaki</h4>
+                                            <p>Chuẩn vị Nhật, đúng gu Nhật.</p>
+                                            <h5>$9.90</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/G%C3%A0-r%C3%A1n-s%E1%BB%91t-ti%C3%AAu/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-04.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý sốt kem</h4>
+                                            <p>Sệt, béo ngậy</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AD-%C3%9D-S%E1%BB%91t-Kem/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-05.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý sốt bò bằm</h4>
+                                            <p>Chuẩn vị mỳ Ý.</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-S%E1%BB%91t-B%C3%B2-B%E1%BA%B1m/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-06.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý Hải sản</h4>
+                                            <p>Đậm đà hương vị biển.</p>
+                                            <h5>$5.94</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-H%E1%BA%A3i-S%E1%BA%A3n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-07.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hambuger gà</h4>
+                                            <p>Càng ăn càng ngon.</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/Hamburger-G%C3%A0/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-08.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hamburger bò</h4>
+                                            <p>Bò mềm, thấm sốt</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/Hamburger-B%C3%B2/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-09.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hambuger Đặc biệt</h4>
+                                            <p>Đầy đủ, chất lượng</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-H%E1%BA%A3i-S%E1%BA%A3n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-01.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán Hỏa diệm sơn</h4>
+                                            <p>Cay nồng thơm đượm</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-H%E1%BA%A3i-S%E1%BA%A3n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-02.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán sốt phô mai</h4>
+                                            <p>Dành cho tín đồ phô mai.</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-H%E1%BA%A3i-S%E1%BA%A3n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-03.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Gà rán sốt Teriyaki</h4>
+                                            <p>Chuẩn vị Nhật, đúng gu Nhật.</p>
+                                            <h5>$4.95</h5>
+                                            <a class="btn btn-sm btn-circle btn-outline-new-white"  th:href="@{http://localhost/50Chickens/p/M%C3%AC-%C3%9D-H%E1%BA%A3i-S%E1%BA%A3n/}">Đặt món</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-04.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý sốt kem</h4>
+                                            <p>Sệt, béo ngậy</p>
+                                            <h5>$4.95</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-05.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý sốt bò bằm</h4>
+                                            <p>Chuẩn vị mỳ Ý.</p>
+                                            <h5>$4.95</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-06.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Mỳ ý Hải sản</h4>
+                                            <p>Đậm đà hương vị biển.</p>
+                                            <h5>$4.95</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-07.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hambuger gà</h4>
+                                            <p>Càng ăn càng ngon.</p>
+                                            <h5>$4.95</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-08.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hamburger bò</h4>
+                                            <p>Bò mềm, thấm sốt</p>
+                                            <h5>$4.95</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img th:src="@{/images/img-09.jpg}" class="img-fluid img-fluid-menu" alt="Image">
+                                        <div class="why-text">
+                                            <h4>Hambuger Đặc biệt</h4>
+                                            <p>Đầy đủ, chất lượng</p>
+                                            <h5>$4.95/h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Start Gallery -->
+    <div class="gallery-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>Hình ảnh</h2>
+                        <p>Một số hình ảnh món ăn của quán</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tz-gallery">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-01.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-01.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-02.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-02.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-03.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-03.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-04.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-04.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-05.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-05.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <a class="lightbox" th:href="@{/images/gallery-img-06.jpg}">
+                            <img class="img-fluid" th:src="@{/images/gallery-img-06.jpg}" alt="Gallery Images">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery -->
+
+    <div th:replace="navigation :: footer_menu"></div>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+    <!-- ALL PLUGINS -->
+    <script th:src="@{/js/jquery.superslides.min.js}"></script>
+    <script th:src="@{/js/images-loded.min.js}"></script>
+    <script th:src="@{/js/isotope.min.js}"></script>
+    <script th:src="@{/js/baguetteBox.min.js}"></script>
+    <script th:src="@{/js/form-validator.min.js}"></script>
+    <script th:src="@{/js/contact-form-script.js}"></script>
+    <script th:src="@{/js/custom.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChickensWebParent/ChickensBackEnd/50ChickensBackEnd.iml" filepath="$PROJECT_DIR$/ChickensWebParent/ChickensBackEnd/50ChickensBackEnd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChickensCommon/50ChickensCommon.iml" filepath="$PROJECT_DIR$/ChickensCommon/50ChickensCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChickensWebParent/ChickensFrontEnd/50ChickensFrontEnd.iml" filepath="$PROJECT_DIR$/ChickensWebParent/ChickensFrontEnd/50ChickensFrontEnd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChickensWebParent/50ChickensWebParent.iml" filepath="$PROJECT_DIR$/ChickensWebParent/50ChickensWebParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChickensProject.iml" filepath="$PROJECT_DIR$/ChickensProject.iml" />
+    </modules>
+  </component>
+</project>

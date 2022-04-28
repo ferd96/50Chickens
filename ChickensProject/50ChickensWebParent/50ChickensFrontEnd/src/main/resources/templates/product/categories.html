@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head('Category', 'none')" />
+
+<body>
+    <div th:replace="navigation :: header_menu"></div>
+    <div th:replace="navigation :: search_nav"></div>
+    <div class="container" style="padding:150px 0 10px 0;">
+
+        <div class="text-center">
+            <h1>Thực đơn</h1>
+        </div>
+
+        <div class="row categories" style="margin-top:40px;">
+            <div class="col-4 category-item" th:each="cat : ${listCategories}">
+                <div class="category-img" ><img th:src="@{${cat.getImagePath}}" width="300"  style="object-fit: cover;"/></div>
+                <div class="category-name">
+                    <a th:href="@{'/c/' + ${cat.alias}}">[[${cat.name}]]</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div th:replace="navigation :: footer_menu"></div>
+</body>
+
+</html>
